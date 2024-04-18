@@ -1,0 +1,19 @@
+runtime: python311
+entrypoint: gunicorn -w 3 -t 120 -b :$PORT app:app
+
+env_variables:
+
+  WHATSAPP_TOKEN: xxxxxxxxxx
+  WHATSAPP_URL: xxxxxxxxxx
+  OPENAI_KEY: xxxxxxxxxx
+  ID_CARPETA_DRIVE: xxxxxxxxxx
+  ID_CARPETA_CACHE: xxxxxxxxxx
+
+  CLOUD_SERVER_NAME: xxxxx
+  CLOUD_SQL_USERNAME: xxxxx
+  CLOUD_SQL_PASSWORD: xxxxx
+  CLOUD_SQL_DATABASE_CMP: xxxxx
+  CLOUD_SQL_DATABASE_CDC: xxxxx
+
+vpc_access_connector:
+  name: xxxxxxxx
